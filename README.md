@@ -12,7 +12,7 @@ To ensure the dataset's comprehensiveness, an additional collection of images wa
 
 All images underwent a preliminary step of pedestrian isolation. This was achieved by employing a person detector, specifically [OpenPifPaf](https://openpifpaf.github.io/intro.html). By accurately detecting and segmenting pedestrians within the images, the subsequent annotation process was applied. The annotation process itself followed an iterative approach to gradually improve the dataset's quality and inclusiveness. It commenced with the curation of a small initial dataset, which was used to train an initial classifier. With this classifier in place, additional images were sourced from a variety of different sources. Subsequently, the previously trained classifier was utilized to automatically annotate these newly acquired images. However, to ensure accuracy, manual inspection of the annotations was conducted to identify any misclassifications (as the dataset grew in size, it was expected that the number of misclassifications would decrease). This manual inspection of misclasification also presented an opportunity to analyze the reasons behind misclassifications - knowledge that influenced future data sourcing strategies or inform adjustments to the model building process. The iterative nature of this approach, involving constant refinement through training, data sourcing, and manual inspection, ensured the dataset's continuous improvement, ultimately leading to a more reliable and comprehensive resource for smartphone usage detection in pedestrian images.
 
-The dataset consist of a total of 9808 images of pedestrian (single pedestrian per image), from which 2640 are engaged with a smartphone while 7168 of them are not. This imbalance is kept to demonstrate real-world composition of smartphone users amongst pedestrians, while avoiding severe imbalances that might hinder training. The dataset can be downloaded from [here](https://drive.google.com/file/d/19s5nV1UHCmF59w_ELDtV-0HuC2p3XEhM/view?usp=sharing)
+The dataset consist of a total of 9808 images of pedestrian (single pedestrian per image), from which 2640 are engaged with a smartphone while 7168 of them are not. This imbalance is kept to demonstrate real-world composition of smartphone users amongst pedestrians, while avoiding severe imbalances that might hinder training. The dataset can be downloaded from [here](https://drive.google.com/file/d/19s5nV1UHCmF59w_ELDtV-0HuC2p3XEhM/view?usp=sharing).
 
 ## Training the Classifier
 
@@ -27,5 +27,7 @@ The notebook ```infer.ipynb``` provides details on how to classify your images u
 
 ## References
 <a id="1">[1]</a> Nasar, J.L. and Troyer, D., 2013. Pedestrian injuries due to mobile phone use in public places. Accident Analysis & Prevention, 57, pp.91-95.
+
 <a id="2">[2]</a>  Frej, D., Jaśkiewicz, M., Poliak, M. and Zwierzewicz, Z., 2022. Smartphone Use in Traffic: A Pilot Study on Pedestrian Behavior. Applied Sciences, 12(24), p.12676.
+
 <a id="3">[3]</a> Y. Deng, P. Luo, C. C. Loy, X. Tang, "Pedestrian attribute recognition at far distance," in Proceedings of ACM Multimedia (ACM MM), 2014
