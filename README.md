@@ -4,7 +4,7 @@ In today's digital age, it is becoming increasingly common to witness pedestrian
 
 ![alt text](https://github.com/saadejazz/smato/blob/main/images/example_predictions.png)
 
-_The prediction scheme for the pictures above is **predicted_label: (true|false), true_label: (1|0)**
+The prediction scheme for the pictures above is **<predicted_label: (true|false)>, <true_label: (1|0)>**
 
 ## Sourcing the Dataset
 
@@ -27,8 +27,8 @@ The notebook ```train.ipynb``` provides further insights into the code implement
 ## Inference
 The notebook ```infer.ipynb``` provides details on how to classify your images using this classifier. A saved model is already included in the repository in the folder ```saved_moels```.
 
-## Other models
-A model using EfficientNet V2M as the feature extractor (has better benchmark performance) was also trained. This trained model performed slightly better than the one based on MobileNet V2, and can be downloaded from [here](https://drive.google.com/file/d/1IEBlPKuedAusiFGQOx-udnTLAt3-Aj2c/view?usp=sharing) folder. However, it must be noted that the preprocessing steps for this feature extractor are included in the model and should be avoided in the inference code. More details on the training of this model are in the notebook: ```misc/train-efficientnet.ipynb```. Moreover, it should also be noted that this model is heavier and hence would require a greater computational burden and hence inference time.
+## EfficientNet V2 as another model
+A model using EfficientNet V2M as the feature extractor (has better benchmark performance) was also trained. This trained model performed slightly better than the one based on MobileNet V2, and can be downloaded from [here](https://drive.google.com/file/d/1IEBlPKuedAusiFGQOx-udnTLAt3-Aj2c/view?usp=sharing). However, it must be noted that the preprocessing steps for this feature extractor are included in the model and should be avoided in the inference code. More details on the training of this model are in the notebook: ```misc/train-efficientnet.ipynb```. Moreover, it should also be noted that this model is heavier and hence would require a greater computational burden and hence inference time.
 
 ## References
 <a id="1">[1]</a> Nasar, J.L. and Troyer, D., 2013. Pedestrian injuries due to mobile phone use in public places. Accident Analysis & Prevention, 57, pp.91-95.
